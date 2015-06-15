@@ -10,6 +10,7 @@ and _line height 1.2  _
 * Constants are dark red.
 * Console and debugger statements are red, allowing to spot and remove them easily.
 * Line number is red.
+* Search results in borders for hits, and marks current.
 
 ![Javascript](https://github.com/xErik/Stars-and-Stripes-Theme-Syntax-for-Atom/raw/master/images/javascript.png)
 #####CSS

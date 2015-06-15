@@ -11,6 +11,7 @@ and _line height 1.2  _
 * Console and debugger statements are red, allowing to spot and remove them easily.
 * Line number is red.
 * Search results in borders for hits, and marks current.
+* Cursor is red and has a width of 2px.
 
 ![Javascript](https://github.com/xErik/Stars-and-Stripes-Theme-Syntax-for-Atom/raw/master/images/javascript.png)
 #####CSS

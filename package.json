@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "description": "Stars and Stripes Theme Syntax for Atom",
   "keywords": ["syntax","theme","atom","editor"],
-  "repository": "https://github.com/atom/stars-and-stripes-theme-syntax",
+  "repository": "https://github.com/xErik/Stars-and-Stripes-Theme-Syntax-for-Atom",
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"

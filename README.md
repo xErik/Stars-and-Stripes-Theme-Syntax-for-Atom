@@ -1,15 +1,25 @@
 # Stars and Stripes Theme
 
-Screenshots taken with font
+Screenshots show font [Anonymous Pro](http://www.marksimonson.com/fonts/view/anonymous-pro), _font size 14_
+and _line height 1.2  _
 
-* Font "Anonymous Pro"
-* Font Size 14
-* Line Height 1.2
-
-There is plenty room for improvement, some Atom CSS selectors are probably not used correctly.
+#####Javascript
+* All functions have a grey background, which helps spotting anonymous functions.
+* Code folding is yellow on grey, to make it stand out.
+* Block comments are green, line comments grey.
+* Constants are dark red.
+* Console and debugger statements are red, allowing to spot and remove them easily.
+* Line number is red.
 
 ![Javascript](https://github.com/xErik/Stars-and-Stripes-Theme-Syntax-for-Atom/raw/master/images/javascript.png)
+#####CSS
 
 ![CSS](https://github.com/xErik/Stars-and-Stripes-Theme-Syntax-for-Atom/raw/master/images/css.png)
+#####HTML  
+* Text is red + bold, allowing to spot it easily.
 
-![HTML]((https://github.com/xErik/Stars-and-Stripes-Theme-Syntax-for-Atom/raw/master/images/html.png)
+
+![HTML](https://github.com/xErik/Stars-and-Stripes-Theme-Syntax-for-Atom/raw/master/images/html.png)
+
+#####TODO
+There is plenty of room for improvement, some Atom CSS selectors are probably not used correctly.

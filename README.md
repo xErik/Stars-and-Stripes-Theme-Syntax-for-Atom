@@ -8,8 +8,8 @@ Screenshots taken with font
 
 There is plenty room for improvement, some Atom CSS selectors are probably not used correctly.
 
-![Javascript](https://github.com/xErik/Stars-and-Stripes-Theme-Syntax-for-Atom/raw/master/images/javascript.tiff)
+![Javascript](https://github.com/xErik/Stars-and-Stripes-Theme-Syntax-for-Atom/raw/master/images/javascript.png)
 
-![CSS](https://github.com/xErik/Stars-and-Stripes-Theme-Syntax-for-Atom/raw/master/images/css.tiff)
+![CSS](https://github.com/xErik/Stars-and-Stripes-Theme-Syntax-for-Atom/raw/master/images/css.png)
 
-![HTML](images/html.tiff)
+![HTML]((https://github.com/xErik/Stars-and-Stripes-Theme-Syntax-for-Atom/raw/master/images/html.png)

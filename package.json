@@ -1,7 +1,7 @@
 {
   "name": "stars-and-stripes-theme-syntax",
   "theme": "syntax",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Stars and Stripes Theme Syntax for Atom",
   "keywords": ["syntax","theme","atom","editor"],
   "repository": "https://github.com/xErik/Stars-and-Stripes-Theme-Syntax-for-Atom",

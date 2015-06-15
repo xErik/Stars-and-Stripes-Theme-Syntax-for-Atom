@@ -1,7 +1,7 @@
 # Stars and Stripes Theme
 
 Screenshots show font [Anonymous Pro](http://www.marksimonson.com/fonts/view/anonymous-pro), _font size 14_
-and _line height 1.2  _
+and _line height 1.2_
 
 #####Javascript
 * All functions have a grey background, which helps spotting anonymous functions.

@@ -1,0 +1,457 @@
+@import "syntax-variables";
+
+atom-text-editor, :host {
+  background-color: white;
+  color: black;
+
+  .wrap-guide {
+    background-color: #eeeeee;
+  }
+
+  .indent-guide {
+    color: #eeeeee;
+  }
+
+  .invisible-character {
+    color: #eeeeee;
+  }
+
+  .gutter {
+    background-color: white;
+    color: black;
+
+    .line-number {
+      &.cursor-line {
+        background-color: white;
+        color: red;
+      }
+
+      &.cursor-line-no-selection {
+          background-color: #E8E8FF;
+          color: red;
+      }
+    }
+  }
+
+.gutter .line-number.folded,
+.gutter .line-number:after,
+.fold-marker:after {
+  color: yellow;
+  background-color:black;
+  border: 1px yellow solid;
+}
+
+  .invisible {
+    color: black;
+  }
+
+  .cursor {
+    border-left: 2px red solid;
+  }
+
+  .line.cursor-line {
+      background-color:#E8E8FF !important;
+    }
+
+  .selection .region {
+    background-color: #D4E4FF !important;
+    border: 1px #D4E4FF solid !important;
+    border-radius: 2px;
+  }
+} /* end host */
+
+// atom-text-editor .search-results .marker .region,
+// :host .search-results .marker .region {
+//   background-color: transparent;
+//   border: 1px solid @syntax-result-marker-color;
+// }
+//
+// atom-text-editor .search-results .marker.current-result .region,
+// :host .search-results .marker.current-result .region {
+//   border: 1px solid @syntax-result-marker-color-selected;
+// }
+
+atom-text-editor::shadow .highlight.find-result .region {
+    border: 1px solid black;
+    border-radius: 2px;
+
+}
+atom-text-editor::shadow .highlight.current-result .region,
+atom-text-editor::shadow .highlight.current-result ~ .highlight.selection .region {
+  background-color: #FFE883;
+  border: 1px solid #FFE883;
+  border-radius: 2px;
+  color:black !important;
+}
+
+.comment { // text of line comment, without the //
+ color:#ADADAD;
+ font-weight: normal;
+}
+
+.keyword {
+    color: #C96916;
+    font-weight: normal;
+
+  &.control { // JS: 'if', 'else' | same as storage
+    color: #AA2063;
+
+  }
+
+  &.operator {
+    color: #0000AA;
+    font-weight:bold;
+  }
+
+  &.other { // 'debugger'
+      color: red;
+      font-weight: bold;
+  }
+
+  &.other.special-method { // JS: unknown
+  }
+
+  &.other.unit { // JS: unknown
+  }
+}
+
+
+.storage { // JS: var, ...
+  color: #AA2063;
+  font-weight: normal;
+}
+
+.source {
+    font-weight: bold;
+}
+
+.constant {
+  color: #aa0000;
+
+  &.language { // JS: Infinity|NaN|undefined| "boolean" |null | "other"?
+      font-weight: bold;
+  }
+
+  &.character.escape { // JS: escape in string "12\"4"
+    color: black;
+    background: yellow;
+  }
+
+  &.numeric {
+      font-weight: bold;
+  }
+
+  &.other { // CSS: hex definitions
+  }
+
+  &.other.color { // JS: unknown
+  }
+
+  &.other.symbol { // JS: unknown
+  }
+}
+
+.variable {
+  color: #ff0000;
+
+  &.interpolation {
+    color: darken(@red, 10%);
+  }
+
+  &.parameter.function {
+    color: #C96916;
+    font-weight: bold;
+  }
+
+  &.language {
+      color: black;
+      font-style: italic;
+      font-weight: normal;
+  }
+}
+
+.invalid.illegal {
+  background-color: yellow;
+  color: black;
+}
+
+.string {
+  color: #00894D;
+  font-weight: normal;
+
+
+  &.regexp {
+    color: black;
+    font-weight:normal;
+  }
+
+  &.other.link {
+    color: @red;
+  }
+}
+
+.punctuation {
+  &.definition {
+    &.comment { // marker of single line comment //
+      color: #ADADAD;
+      font-weight:normal;
+    }
+
+    &.string {
+        color: #00894D;
+    }
+
+    &.variable,
+    &.parameters,
+    &.array {
+      color: black;
+    }
+
+    &.heading,
+    &.identity {
+      color: @blue;
+    }
+
+    &.bold {
+      color: @light-orange;
+      font-weight: bold;
+    }
+
+    &.italic {
+      color: @purple;
+      font-style: italic;
+    }
+  }
+
+  &.section.embedded {
+    color: darken(@red, 10%);
+  }
+
+}
+
+.support {
+    //font-style: italic;
+  &.class {
+    font-weight: normal;
+    font-style: italic;
+    color: black;
+  }
+
+  &.function  {
+    color: #0000FF;//@cyan;
+
+    &.js { // Math.ROUND <- function call
+    }
+
+    &.js.console { // console.LOG <- function call
+        color: #FF0000;
+        font-weight:bold;
+    }
+
+    &.any-method {
+      color: #0000FF;
+    }
+  }
+
+    &.variable { // (module|exports|__filename|__dirname|global|process)
+        color: #FF0000;
+    }
+
+    &.constant { // JS: prototype, constant, length, ...
+        color:#AA2063;
+        //font-weight:normal;
+    }
+
+}
+
+
+.entity {
+  &.name.function {
+    color: #0000FF;
+    font-weight: bold;
+  }
+
+  &.name.class, &.name.type.class {
+    color: #0000FF;
+    font-weight: bold;
+  }
+
+  &.name.section {
+    color: @blue;
+    font-weight: bold;
+  }
+
+  &.name.tag {
+    color: @red;
+    text-decoration: underline;
+  }
+
+  &.name.type {
+    color: #aa0000;
+  }
+
+  &.name.type.object.js {
+    color: #FF0000;
+    font-weight: bold;
+  }
+
+  &.other.inherited-class {
+    color: @green;
+  }
+
+  &.other.attribute-name {
+    color: @orange;
+
+    &.id {
+      color: @blue;
+    }
+  }
+}
+
+.comment.block.documentation .punctuation.definition.comment, .comment.block.documentation  {
+    color: green;
+    font-weight:normal;
+}
+
+.meta {
+  &.class {
+    color: @light-orange;
+  }
+
+  &.function {
+      background-color: rgba(150,150,150,0.2);
+      border-radius: 2px;
+  }
+
+  &.link {
+    color: @orange;
+  }
+
+  &.require {
+    color: @blue;
+  }
+
+  &.selector {
+    color: @purple;
+  }
+
+  &.separator {
+    background-color: @gray;
+    color: black;
+  }
+}
+
+.none {
+  color: black;
+}
+
+.markup {
+  &.bold {
+    color: @orange;
+    font-weight: bold;
+  }
+
+  &.changed {
+    color: @purple;
+  }
+
+  &.deleted {
+    color: @red;
+  }
+
+  &.italic {
+    color: @purple;
+    font-style: italic;
+  }
+
+  &.heading .punctuation.definition.heading {
+    color: @blue;
+  }
+
+  &.inserted {
+    color: @green;
+  }
+
+  &.list {
+    color: @red;
+  }
+
+  &.quote {
+    color: @orange;
+  }
+
+  &.raw.inline {
+    color: @green;
+  }
+}
+
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+  &.heading {
+    color: @green;
+  }
+}
+
+atom-text-editor[mini] .scroll-view,
+:host([mini]) .scroll-view {
+  padding-left: 1px;
+}
+
+.html {
+    color: black;
+    &.entity.name.tag {
+        color: blue;
+        text-decoration:none;
+        font-weight:normal;
+        // &.script {
+        //     color:red;
+        // }
+    }
+    &.entity.other {
+        color: #AA2063;
+        font-weight:normal;
+    }
+    &.string {
+        color: #00894D;
+        font-weight:normal;
+    }
+    &.punctuation.definition.tag {
+        color: blue;
+        font-weight:normal;
+    }
+    &.comment.block {
+        color: #ADADAD;
+        font-weight:normal;
+    }
+    &.text {
+        color:red;
+        font-weight:bold;
+    }
+}
+
+.css {
+    font-weight:normal;
+
+    &.entity.name.tag {
+        color: blue;
+        text-decoration:none;
+        // &.script {
+        //     color:red;
+        // }
+    }
+    &.entity.other {
+        color: #AA2063;
+    }
+    &.constant {
+        color: #aa0000;
+    }
+    &.keyword {
+        color: #0000FF;
+        font-weight:normal;
+    }
+    &.punctuation {
+    }
+    &.support {
+
+    }
+}

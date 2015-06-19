@@ -28,8 +28,7 @@ var myFunction = function(param1, param2) {
 
 jQuery.fn = jQuery.prototype = {
 	jquery: version,
-	constructor: jQuery,
-	length: 0,
+    re : /123\/456/ // Regex-escapes have a yellow background
 
 	toArray: function() {
 		return slice.call( this );

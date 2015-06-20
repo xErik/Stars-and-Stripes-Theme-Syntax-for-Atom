@@ -10,7 +10,7 @@ var f = null;
 
 var hidden = function YouCannotSeeMe() {
     //
-}
+};
 
 /**
  * A block comment is green.
@@ -21,32 +21,30 @@ var hidden = function YouCannotSeeMe() {
  */
 var myFunction = function(param1, param2) {
     if(param1 === undefined || param2 === undefined) {
-        throw 'Throw is a keyword.'
+        throw 'Throw is a keyword.';
     }
     return [param1, param2].join('');
-}
+};
 
 jQuery.fn = jQuery.prototype = {
 	jquery: version,
-    re : /123\/456/ // Regex-escapes have a yellow background
+    re : /123\/456/, // Regex-escapes show a yellow background
 
 	toArray: function() {
 		return slice.call( this );
 
-        function() {} // every function has a grey background
+        function bla() {} // every function has a grey background
 	},
 
 	get: function( num ) {
         debugger;
         // this is written in italics
-		return num != null ?
+		return num !== null ?
 			( num < 0 ? this[ num + this.length ] : this[ num ] ) :
 			slice.call( this );
 	}
-}
-
-String.prototype.doSomething = function () {
-    // A line comment is grey.
 };
 
+String.prototype.doSomething = function () {
+};
 module.exports = myFunction;
